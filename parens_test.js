@@ -5,12 +5,20 @@ if(item === "("){
 	return counter++;
 
 }
-else if (item === ")"){
+if (item === ")"){
 	return counter--;
-} else {return}
+}
+return counter;
 
 },0);
 
 }
 
-balencedParens("((((()");
+$(document).ready(function(){
+	var text = $("#parens").val();
+	$('button').on("click",function(){
+		balencedParens(text);
+	});
+})
+
+
